@@ -31,4 +31,10 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'twilio' => [
+        'sid' => 'AC334f5f814595f7035159ab683bb5fc98',
+        'token' => '4112f5077f4d14fcd5ff31cd7d588599',
+        'sender' => '+13159225619'
+      ],
+
 ];
