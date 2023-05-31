@@ -18,7 +18,7 @@ class AuthController extends Controller
     public function generate(Request $request)
     {
         $request->validate([
-            'mobile_no' => 'required|exists:users, mobile_no'
+            'mobile_no' => 'required|exists:users,mobile_no'
         ]);
         $userOtp = $this->generateOTP($request->mobile_no);
         $userOtp->sendOTP($request->mobile_no);

@@ -30,7 +30,8 @@
           </div>
 
           <div>
-            <form action="{{ route('otp.generate') }}" method="POST">
+            <form action="{{ route('otp.getlogin') }}" method="POST">
+              @csrf
               <div class="flex flex-col space-y-16">
                 <div
                   class="flex flex-row items-center justify-between mx-auto w-full max-w-xs"
