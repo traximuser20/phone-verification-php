@@ -239,7 +239,7 @@
                                 REGISTER
                             </h1>
                             @if (session('error'))
-                            <div class="text-rose-500 font-bold">{{$message}}</div>
+                            <div class="text-rose-500 font-bold">{{session('error')}}</div>
                             @endif
                             <p>Enter your information to register</p>
                         </div>

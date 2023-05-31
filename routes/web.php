@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\otpVerification;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,12 +18,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/otp', function () {
-    return view('otp');
-});
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::controller(App\Http\Controllers\Auth\AuthController::class)->group(function() {
     Route::get('/otp/login','login')->name('otp.login');
     Route::post('/otp/generate','generate')->name('otp.generate');
     Route::get('/otp/verification{user_id}','verification')->name('otp.verification');
+    Route::post('/otp/login','loginWithOtp')->name('otp.getlogin');
+
 });

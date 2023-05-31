@@ -8,10 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 use Exception;
 use Twilio\Rest\Client;
 
-class otpCodes extends Model
+class UserOtp extends Model
 {
     use HasFactory;
-
     protected $fillable = [
         'user_id',
         'otp',

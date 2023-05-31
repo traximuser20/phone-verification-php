@@ -23,11 +23,14 @@
             </div>
             <div class="flex flex-row text-sm font-medium text-gray-400">
               <p>We have sent a code to your phone number</p>
+              @if (session('success'))
+              <div class="text-green-500 font-bold">{{session('success')}}</div>
+              @endif
             </div>
           </div>
 
           <div>
-            <form action="" method="post">
+            <form action="{{ route('otp.generate') }}" method="POST">
               <div class="flex flex-col space-y-16">
                 <div
                   class="flex flex-row items-center justify-between mx-auto w-full max-w-xs"
